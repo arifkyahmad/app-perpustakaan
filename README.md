@@ -1,4 +1,4 @@
-SISTEM PERPUSTAKAAN DIGITAL KAMPUS
+NAMA APLIKASI:SISTEM PERPUSTAKAAN DIGITAL KAMPUS
 TUJUAN: aplikasi yang dikelola petugas/admin untuk mengelola buku, anggota, dan transaksi peminjaman.
 Cara menjalankan projek secara lokal:
 
