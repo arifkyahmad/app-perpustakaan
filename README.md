@@ -30,6 +30,22 @@ tahap 5
 Tugas
 <img width="1236" height="787" alt="Screenshot 2026-09-03 111352" src="https://github.com/user-attachments/assets/2c25d6e5-49c3-478d-a5e7-0f3c8a4b6bec" />
 
+## Praktikum 3 ##
+
+tahap 3
+<img width="1917" height="485" alt="Screenshot 2026-09-09 094258" src="https://github.com/user-attachments/assets/e10e69e6-bdcf-4d8d-a102-9d1e3553ca98" />
+
+tahap 6
+<img width="843" height="552" alt="Screenshot 2026-09-09 095549" src="https://github.com/user-attachments/assets/4ac168ea-45b9-4f47-b2c9-a53ae104eacd" />
+<img width="1882" height="511" alt="Screenshot 2026-09-09 095602" src="https://github.com/user-attachments/assets/f660a2a3-8c83-400b-9c20-113616da48ca" />
+<img width="731" height="897" alt="Screenshot 2026-09-09 095639" src="https://github.com/user-attachments/assets/b48bf66d-8591-47e5-a2af-01ab0dcae52f" />
+
+tugas
+<img width="1905" height="416" alt="Screenshot 2026-09-09 101716" src="https://github.com/user-attachments/assets/4057676d-e5a1-43ad-90a7-15cf42257a30" />
+<img width="767" height="916" alt="Screenshot 2026-09-09 101725" src="https://github.com/user-attachments/assets/d817121c-3196-4ffc-8da0-12b3bbd9a4ee" />
+<img width="1917" height="470" alt="Screenshot 2026-09-09 101747" src="https://github.com/user-attachments/assets/7114fdaa-8f18-413d-bcb5-2244d15ef889" />
+
+
 
 
 
