@@ -14,3 +14,12 @@ View: Bertanggung jawab murni atas antarmuka visual (UI/HTML) yang dilihat oleh 
 
 Controller:  Bertindak sebagai perantara yang menerima request pengguna, memanggil Model untuk mengambil data, lalu mengoper hasilnya ke View untuk ditampilkan.
 -->
+
+
+## praktikum 2 ##
+
+langkah 4
+
+langkah 5
+
+tugas 
