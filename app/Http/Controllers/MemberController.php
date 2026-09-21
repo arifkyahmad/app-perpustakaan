@@ -7,33 +7,18 @@ use Illuminate\Http\Request;
 
 class MemberController extends Controller
 {
-    private array $members = [
-        [
-            'id'            => 1,
-            'nama'          => 'Ahmad Arifky',
-            'nim'           => '12345678',
-            'email'         => 'arifky@example.com',
-            'nomor_telepon' => '081234567890',
-            'alamat'        => 'Jl. Pemuda No. 10',
-            'status'        => 'aktif',
-        ],
-        [
-            'id'            => 2,
-            'nama'          => 'Budi Santoso',
-            'nim'           => '87654321',
-            'email'         => 'budi@example.com',
-            'nomor_telepon' => '089876543210',
-            'alamat'        => 'Jl. Merdeka No. 45',
-            'status'        => 'nonaktif',
-        ],
-    ];
+private array $members = [
+    ['id' => 1, 'nama' => 'Siti Aminah', 'nim' => '2310501001', 'email' => 'siti.aminah@pens.ac.id', 'nomor_telepon' => '081234567890', 'status' => 'aktif'],
+    ['id' => 2, 'nama' => 'Budi Santoso', 'nim' => '2310501002', 'email' => 'budi.santoso@pens.ac.id', 'nomor_telepon' => '081298765432', 'status' => 'aktif'],
+    ['id' => 3, 'nama' => 'Dewi Lestari', 'nim' => '2310501003', 'email' => 'dewi.lestari@pens.ac.id', 'nomor_telepon' => '081211122233', 'status' => 'nonaktif'],
+];
 
-    public function index()
-    {
-        $members = $this->members;
+public function index()
+{
+    $members = $this->members;
 
-        return view('members.index', compact('members'));
-    }
+    return view('members.index', compact('members'));
+}
 
     public function create()
     {
