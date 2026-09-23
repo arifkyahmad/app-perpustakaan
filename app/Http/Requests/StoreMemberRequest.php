@@ -24,8 +24,8 @@ class StoreMemberRequest extends FormRequest
     {
         return [
             'nama'          => 'required|string|max:100',
-            'nim'           => 'required|string|max:20',
-            'email'         => 'required|email|max:100',
+            'nim'           => 'required|string|max:20|unique:members,nim',
+            'email'         => 'required|email|max:100|unique:members,email',
             'nomor_telepon' => 'required|string|max:20',
             'alamat'        => 'required|string|max:255',
             'status'        => 'required|in:aktif,nonaktif',
