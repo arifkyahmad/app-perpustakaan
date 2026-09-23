@@ -39,6 +39,7 @@
             @endforelse
         </tbody>
     </table>
+            {{ $categories->links('pagination::simple-default') }}
 
-    <p><em>Catatan: data di atas masih data dummy (array statis di Controller), belum dari database. Migration &amp; Model Eloquent baru dibuat di Pertemuan 5.</em></p>
+
 @endsection

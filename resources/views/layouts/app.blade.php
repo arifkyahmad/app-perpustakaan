@@ -70,6 +70,10 @@ button.btn:hover,
 .btn:hover {
     background: #1d4ed8;
 }
+nav svg {
+    max-height: 20px;
+    display: inline-block;
+}
     </style>
 </head>
 <body>
