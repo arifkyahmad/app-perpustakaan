@@ -45,6 +45,20 @@ tugas
 <img width="767" height="916" alt="Screenshot 2026-09-09 101725" src="https://github.com/user-attachments/assets/d817121c-3196-4ffc-8da0-12b3bbd9a4ee" />
 <img width="1917" height="470" alt="Screenshot 2026-09-09 101747" src="https://github.com/user-attachments/assets/7114fdaa-8f18-413d-bcb5-2244d15ef889" />
 
+## Praktikum 7 ##
+
+<img width="1917" height="962" alt="Screenshot 2026-10-01 122756" src="https://github.com/user-attachments/assets/4ee870e1-1cf7-4fa0-99f8-bffc722a0dbc" />
+<img width="1917" height="962" alt="Screenshot 2026-10-01 124539" src="https://github.com/user-attachments/assets/e0b83f40-f007-4238-9b7e-0314d1cd2d73" />
+<img width="795" height="567" alt="Screenshot 2026-10-01 124555" src="https://github.com/user-attachments/assets/38bb2ad8-8d03-4d4c-8e86-007babb7a415" />
+<img width="881" height="325" alt="Screenshot 2026-10-01 124611" src="https://github.com/user-attachments/assets/960b9df6-5974-4319-92b5-cf9129efe01c" />
+<img width="801" height="566" alt="Screenshot 2026-10-01 124630" src="https://github.com/user-attachments/assets/e588d93b-d29e-476d-a284-940d08fe7025" />
+<img width="907" height="357" alt="Screenshot 2026-10-01 124704" src="https://github.com/user-attachments/assets/08706e31-2906-4d54-b7a0-3e75148b9b8f" />
+<img width="887" height="312" alt="Screenshot 2026-10-01 124716" src="https://github.com/user-attachments/assets/5fe81ea4-0a8c-46bf-aab6-3c120f7b53e0" />
+
+tugas
+<img width="1917" height="966" alt="Screenshot 2026-10-01 130533" src="https://github.com/user-attachments/assets/7cceb4b4-2a3c-415e-a878-fb06904ebe23" />
+<img width="892" height="455" alt="Screenshot 2026-10-01 131012" src="https://github.com/user-attachments/assets/9e27abc8-3bdb-4b04-851d-2a6ddb124464" />
+
 
 
 
