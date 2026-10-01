@@ -74,6 +74,14 @@ nav svg {
     max-height: 20px;
     display: inline-block;
 }
+.badge {
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 13px;
+}
+.badge-dikembalikan { background: #dcfce7; color: #166534; }
+.badge-dipinjam     { background: #fef3c7; color: #92400e; }
+.badge-terlambat    { background: #fee2e2; color: #991b1b; }
     </style>
 </head>
 <body>
