@@ -7,6 +7,7 @@ use App\Models\Loan;
 use App\Models\Member;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class LoanController extends Controller
 {
@@ -37,7 +38,7 @@ class LoanController extends Controller
 
         $loan = Loan::create([
             'member_id' => $validated['member_id'],
-            'user_id' => auth()->id(),
+            'user_id' => Auth::id(),
             'tanggal_pinjam' => $validated['tanggal_pinjam'],
             'tanggal_kembali' => $validated['tanggal_kembali'],
         ]);
