@@ -1,66 +1,181 @@
-<img width="1702" height="567" alt="Screenshot 2026-09-03 110513" src="https://github.com/user-attachments/assets/96bce1aa-f8ca-48ab-a421-1743447ce1bb" />### Praktikum 1 #
+# app-perpustakaan
 
-NAMA APLIKASI:SISTEM PERPUSTAKAAN DIGITAL KAMPUS
-TUJUAN: aplikasi yang dikelola petugas/admin untuk mengelola buku, anggota, dan transaksi peminjaman.
-Cara menjalankan projek secara lokal:
+Sistem Perpustakaan Digital Kampus — project praktikum Workshop Pemrograman Framework (Laravel 12). Mencakup CRUD lengkap dengan autentikasi berbasis session, REST API, serta halaman Dashboard dan Laporan yang mengonsumsi API aplikasi sendiri lewat Laravel HTTP Client.
 
-1. buka direktori app-perpustakaan
-2. jalankan server mysql di xampp
-3. bash di terminal "php artisan serve"
-4. Buka http://127.0.0.1:8000 di browser
+## Fitur
 
-Model: Bertanggung jawab atas pengelolaan data dan komunikasi langsung dengan database (mengambil, menyimpan, memvalidasi aturan data).
+- **CRUD Buku** — tambah, lihat, ubah, hapus, dengan pagination
+- **CRUD Kategori**
+- **CRUD Anggota** — dengan validasi keunikan NIM dan email
+- **Peminjaman** — satu transaksi bisa memuat beberapa buku (`loan_items`), badge status berwarna, dan proses pengembalian
+- **Autentikasi** — login/logout berbasis session, middleware `auth` untuk seluruh route CRUD
+- **Profil** — lihat data user dan ganti password
+- **REST API** — endpoint JSON untuk `books`, `members`, `loans`, `stats` memakai API Resource (lihat [`API.md`](API.md))
+- **Dashboard & Laporan Peminjaman** — data diambil lewat `Http::get()` ke API internal, bukan query Eloquent langsung
+- **Seeder & Factory** — data dummy bergaya Indonesia (locale `id_ID`) untuk demo
+- **Skenario demo UAS** — lihat [`DEMO.md`](DEMO.md)
 
-View: Bertanggung jawab murni atas antarmuka visual (UI/HTML) yang dilihat oleh pengguna tanpa memproses logika database.
+## Prasyarat
 
-Controller:  Bertindak sebagai perantara yang menerima request pengguna, memanggil Model untuk mengambil data, lalu mengoper hasilnya ke View untuk ditampilkan.
+- PHP >= 8.2 dengan ekstensi `pdo_pgsql`, `mbstring`, `openssl`
+- Composer
+- PostgreSQL
 
-## Praktikum 2 ##
+## Instalasi
 
-tahap 4
-<img width="1282" height="820" alt="Screenshot 2026-09-03 105900" src="https://github.com/user-attachments/assets/807e453d-e646-411e-a9b7-7e6d1087960d" />
+```bash
+git clone <URL-REPOSITORY-KAMU>
+cd app-perpustakaan
+composer install
+```
 
-tahap 5
-<img width="397" height="142" alt="Screenshot 2026-09-03 110326" src="https://github.com/user-attachments/assets/8473d1cb-5260-4e4f-8afe-8be7b8250a7e" />
-<img width="412" height="132" alt="Screenshot 2026-09-03 110356" src="https://github.com/user-attachments/assets/7cc3109d-531d-4118-b5b1-a14e14deb284" />
-<img width="410" height="128" alt="Screenshot 2026-09-03 110408" src="https://github.com/user-attachments/assets/bbc2f55e-d1d7-486d-bbf5-5d990e9c2d08" />
-<img width="447" height="126" alt="Screenshot 2026-09-03 110419" src="https://github.com/user-attachments/assets/8f25364c-953d-4df7-830b-d72751303dad" />
-<img width="1702" height="567" alt="Screenshot 2026-09-03 110513" src="https://github.com/user-attachments/assets/e546f854-84f8-4ae0-bd49-3f187522926d" />
+Salin file environment lalu generate application key:
 
-Tugas
-<img width="1236" height="787" alt="Screenshot 2026-09-03 111352" src="https://github.com/user-attachments/assets/2c25d6e5-49c3-478d-a5e7-0f3c8a4b6bec" />
+```bash
+# Windows
+copy .env.example .env
+# Linux / macOS
+cp .env.example .env
 
-## Praktikum 3 ##
+php artisan key:generate
+```
 
-tahap 3
-<img width="1917" height="485" alt="Screenshot 2026-09-09 094258" src="https://github.com/user-attachments/assets/e10e69e6-bdcf-4d8d-a102-9d1e3553ca98" />
+## Konfigurasi `.env`
 
-tahap 6
-<img width="843" height="552" alt="Screenshot 2026-09-09 095549" src="https://github.com/user-attachments/assets/4ac168ea-45b9-4f47-b2c9-a53ae104eacd" />
-<img width="1882" height="511" alt="Screenshot 2026-09-09 095602" src="https://github.com/user-attachments/assets/f660a2a3-8c83-400b-9c20-113616da48ca" />
-<img width="731" height="897" alt="Screenshot 2026-09-09 095639" src="https://github.com/user-attachments/assets/b48bf66d-8591-47e5-a2af-01ab0dcae52f" />
+### Database
 
-tugas
-<img width="1905" height="416" alt="Screenshot 2026-09-09 101716" src="https://github.com/user-attachments/assets/4057676d-e5a1-43ad-90a7-15cf42257a30" />
-<img width="767" height="916" alt="Screenshot 2026-09-09 101725" src="https://github.com/user-attachments/assets/d817121c-3196-4ffc-8da0-12b3bbd9a4ee" />
-<img width="1917" height="470" alt="Screenshot 2026-09-09 101747" src="https://github.com/user-attachments/assets/7114fdaa-8f18-413d-bcb5-2244d15ef889" />
+Buat database terlebih dahulu, misalnya:
 
-## Praktikum 7 ##
+```sql
+CREATE DATABASE db_perpustakaan;
+```
 
-<img width="1917" height="962" alt="Screenshot 2026-10-01 122756" src="https://github.com/user-attachments/assets/4ee870e1-1cf7-4fa0-99f8-bffc722a0dbc" />
-<img width="1917" height="962" alt="Screenshot 2026-10-01 124539" src="https://github.com/user-attachments/assets/e0b83f40-f007-4238-9b7e-0314d1cd2d73" />
-<img width="795" height="567" alt="Screenshot 2026-10-01 124555" src="https://github.com/user-attachments/assets/38bb2ad8-8d03-4d4c-8e86-007babb7a415" />
-<img width="881" height="325" alt="Screenshot 2026-10-01 124611" src="https://github.com/user-attachments/assets/960b9df6-5974-4319-92b5-cf9129efe01c" />
-<img width="801" height="566" alt="Screenshot 2026-10-01 124630" src="https://github.com/user-attachments/assets/e588d93b-d29e-476d-a284-940d08fe7025" />
-<img width="907" height="357" alt="Screenshot 2026-10-01 124704" src="https://github.com/user-attachments/assets/08706e31-2906-4d54-b7a0-3e75148b9b8f" />
-<img width="887" height="312" alt="Screenshot 2026-10-01 124716" src="https://github.com/user-attachments/assets/5fe81ea4-0a8c-46bf-aab6-3c120f7b53e0" />
+Lalu atur blok database di `.env` untuk PostgreSQL:
 
-tugas
-<img width="1917" height="966" alt="Screenshot 2026-10-01 130533" src="https://github.com/user-attachments/assets/7cceb4b4-2a3c-415e-a878-fb06904ebe23" />
-<img width="892" height="455" alt="Screenshot 2026-10-01 131012" src="https://github.com/user-attachments/assets/9e27abc8-3bdb-4b04-851d-2a6ddb124464" />
+```env
+DB_CONNECTION=pgsql
+DB_HOST=127.0.0.1
+DB_PORT=5432
+DB_DATABASE=db_perpustakaan
+DB_USERNAME=postgres
+DB_PASSWORD=
+```
 
+Sesuaikan `DB_USERNAME` dan `DB_PASSWORD` dengan konfigurasi PostgreSQL di komputermu.
 
+### Variabel khusus project
 
+```env
+# Locale Faker - membuat Seeder/Factory menghasilkan data bergaya Indonesia
+APP_FAKER_LOCALE=id_ID
 
+# Base URL server kedua khusus panggilan API internal (wajib beda port dari server utama)
+INTERNAL_API_URL=http://127.0.0.1:8011
+```
 
+`INTERNAL_API_URL` dibaca lewat `config('services.internal_api.base_url')` di `config/services.php`, dipakai `DashboardController` dan `LoanController@report`.
 
+## Migrasi & Seeder
+
+```bash
+php artisan migrate:fresh --seed
+```
+
+Perintah ini membuat ulang seluruh tabel lalu mengisi data demo:
+
+| Data | Jumlah |
+|---|---|
+| User (1 admin, 2 petugas) | 3 |
+| Kategori | 5 |
+| Buku | 20 |
+| Anggota | 15 |
+| Peminjaman | 10 |
+
+Urutan seeding diatur di `database/seeders/DatabaseSeeder.php`: `UserSeeder` → `CategorySeeder` → `BookSeeder` → `MemberSeeder` → `LoanSeeder`. Urutan ini penting karena `BookFactory` butuh baris `categories` dan `LoanSeeder` butuh `members` + `users`.
+
+## Menjalankan Aplikasi — WAJIB DUA SERVER
+
+`php artisan serve` (PHP built-in web server) memproses **satu request pada satu waktu**. Dashboard dan Laporan Peminjaman mengirim request HTTP ke API aplikasi sendiri. Kalau request itu diarahkan ke port yang sama, server sibuk menunggu balasan dari dirinya sendiri sehingga terjadi **deadlock**: halaman menggantung sampai timeout.
+
+Karena itu jalankan **dua terminal**:
+
+```bash
+# Terminal 1 — melayani trafik browser
+php artisan serve --port=8000
+
+# Terminal 2 — khusus menerima panggilan API internal (INTERNAL_API_URL)
+php artisan serve --port=8011
+```
+
+Buka `http://127.0.0.1:8000`.
+
+> **Peringatan:** kalau hanya satu server yang jalan, halaman **Dashboard** akan menampilkan angka `0` dan halaman **Laporan Peminjaman** tampil kosong. Itu bukan bug aplikasi (ada `try/catch ConnectionException` yang mencegah error 500), melainkan tanda server kedua belum dinyalakan. Di server produksi (Nginx + PHP-FPM atau Laravel Octane) masalah ini tidak muncul karena banyak request diproses bersamaan.
+
+## Akun Demo
+
+| Email | Password | Role |
+|---|---|---|
+| `admin@pens.ac.id` | `password` | admin |
+| `petugas1@pens.ac.id` | `password` | petugas |
+| `petugas2@pens.ac.id` | `password` | petugas |
+
+## Halaman Web
+
+| URL | Nama Route | Akses |
+|---|---|---|
+| `/login` | `login` | publik |
+| `/` | `dashboard` | semua user login |
+| `/books` | `books.index` | semua user login |
+| `/categories` | `categories.index` | semua user login |
+| `/members` | `members.index` | semua user login |
+| `/loans` | `loans.index` | semua user login |
+| `/loans/report` | `loans.report` | semua user login |
+| `/profil` | `profile.show` | semua user login |
+
+## Endpoint API
+
+Base URL: `http://127.0.0.1:8000/api`, header wajib `Accept: application/json`.
+
+| Method | Endpoint |
+|---|---|
+| GET | `/api/books`, `/api/books/{id}` |
+| POST | `/api/books` |
+| PUT | `/api/books/{id}` |
+| DELETE | `/api/books/{id}` |
+| GET | `/api/members`, `/api/members/{id}` |
+| GET | `/api/loans` |
+| POST | `/api/loans` |
+| PUT | `/api/loans/{id}/kembalikan` |
+| GET | `/api/stats` |
+
+Contoh body, response, dan status code lengkap ada di [`API.md`](API.md).
+
+## Struktur Singkat
+
+```
+app/Http/Controllers/           controller web + Api/
+app/Http/Resources/             BookResource, MemberResource, LoanResource
+app/Models/                     Book, Category, Member, Loan, LoanItem, User
+database/seeders/               UserSeeder, CategorySeeder, BookSeeder, MemberSeeder, LoanSeeder
+database/factories/             BookFactory, MemberFactory
+resources/views/                layouts/, partials/, per-resource, vendor/pagination/custom
+routes/web.php                  route halaman web
+routes/api.php                  route REST API
+```
+
+## Troubleshooting
+
+| Gejala | Penyebab | Solusi |
+|---|---|---|
+| Dashboard `0` / Laporan kosong | server `:8011` belum jalan | jalankan terminal kedua |
+| Halaman menggantung lama | `INTERNAL_API_URL` mengarah ke port server utama | set `INTERNAL_API_URL=http://127.0.0.1:8011`, lalu `php artisan config:clear` |
+| `database "db_perpustakaan" does not exist` | database belum dibuat | `CREATE DATABASE db_perpustakaan;` |
+| `password authentication failed for user` | `DB_USERNAME`/`DB_PASSWORD` salah | sesuaikan dengan konfigurasi PostgreSQL lokal |
+| `could not find driver` | ekstensi `pdo_pgsql` belum aktif | aktifkan `pdo_pgsql` di `php.ini` |
+| Data demo hilang / berantakan | database berisi sisa uji coba | `php artisan migrate:fresh --seed` |
+| Buku gagal dihapus (error 500, foreign key) | buku sudah tercatat di peminjaman | normal; hapus hanya buku yang belum pernah dipinjam |
+
+## Dokumen Terkait
+
+- [`DEMO.md`](DEMO.md) — skenario demo UAS langkah demi langkah
+- [`API.md`](API.md) — dokumentasi endpoint REST API beserta contoh response
